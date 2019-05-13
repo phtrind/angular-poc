@@ -1,0 +1,9 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Angular Poc</span>
+    <span class="example-spacer"></span>
+    <button class="btn-login" mat-button (click)="btnLoginClick()" *ngIf="!this.authService.isLogged">Entrar</button>
+    <span *ngIf="this.authService.isLogged">{{ username }}</span>
+    <button class="btn-login" mat-button (click)="btnLogoutClick()" *ngIf="this.authService.isLogged">Sair</button>
+  </mat-toolbar-row>
+</mat-toolbar>
